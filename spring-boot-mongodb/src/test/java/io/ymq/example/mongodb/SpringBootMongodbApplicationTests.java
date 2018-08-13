@@ -42,10 +42,10 @@ public class SpringBootMongodbApplicationTests {
         demoDao.saveDemo(demoEntity);
     }
 
-    @Test
-    public void removeDemoTest() {
-        demoDao.removeDemo(2L);
-    }
+//    @Test
+//    public void removeDemoTest() {
+//        demoDao.removeDemo(2L);
+//    }
 
     @Test
     public void updateDemoTest() {
