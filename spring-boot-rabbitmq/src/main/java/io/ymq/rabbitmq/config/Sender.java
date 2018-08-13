@@ -23,7 +23,7 @@ public class Sender {
 	  
 	  String context = "hello "+name+" --" + new Date().getTime();  
       System.out.println(context);
-      this.rabbitTemplate.convertAndSend("topicExchange", "topic.message.123", context);  
+      this.rabbitTemplate.convertAndSend("topicExchange", "topic.message", context);  
       return context;  
   }
 }

@@ -13,3 +13,24 @@
  - Wechat：关注公众号，搜云库，专注于开发技术的研究与知识分享
  
 ![关注公众号-搜云库](http://www.ymq.io/images/souyunku.png "搜云库")
+
+
+db.createUser(
+  {
+    user: "admin",
+    pwd: "zgzz2025",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
+
+db.grantRolesToUser("admin", [{role: "dbOwner", db: "test" }]);
+
+db.createCollection('var_setting')
+db.createCollection('var_value')
+
+netstat -tunlp|grep mongo
+mongod --config /var/lib/mongodb/conf/rs2.conf &
+
+netstat -tunlp|grep mongo
+mongod --config /var/lib/mongodb/conf/rs2.conf &
+
